@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="etiqueta_tree" model="ir.ui.view">
+        <field name="name">etiqueta.geral.tree</field>
+        <field name="model">etiqueta.geral</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="numero_nfe"/>
+                <field name="cliente"/>
+                <field name="produto"/>
+                <field name="codigo"/>
+                <field name="qtt"/>
+                <field name="qtc"/>
+                <field name="volumes"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="etiqueta_form" model="ir.ui.view">
+        <field name="name">etiqueta.geral.form</field>
+        <field name="model">etiqueta.geral</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="numero_nfe"/>
+                        <field name="cliente"/>
+                    </group>
+                    <group>
+                        <field name="produto"/>
+                        <field name="codigo"/>
+                    </group>
+                    <group>
+                        <field name="qtt"/>
+                        <field name="qtc"/>
+                        <field name="volumes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="etiquetas_action" model="ir.actions.act_window">
+        <field name="name">Etiquetas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">etiqueta.geral</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crie uma nova Etiqueta para impressão estilo zebra!
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="etiqueta_root"
+              name="Etiqueta"
+              sequence="10"/>
+
+    <menuitem id="etiquetas_root"
+              name="Etiquetas"
+              parent="etiqueta_root"
+              sequence="10"/>
+    <menuitem id="etiqueta"
+              name="Etiquetas"
+              parent="etiquetas_root"
+              action="etiquetas_action"
+              sequence="10"/>
+</odoo>

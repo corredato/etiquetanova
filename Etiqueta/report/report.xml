@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_etiqueta" model="ir.actions.report">
+        <field name="name">Etiqueta</field>
+        <field name="model">etiqueta.geral</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">Etiqueta.report_etiqueta_id</field>
+        <field name="report_file">Etiqueta.report_etiqueta_id</field>
+        <field name="binding_model_id" ref="model_etiqueta_geral"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

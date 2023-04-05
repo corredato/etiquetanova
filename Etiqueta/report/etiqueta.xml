@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_etiqueta_id">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <div class="oe_structure">
+                    <div class="row">
+                        <div class="col-xs-8">
+
+                            <div style="font-size: 320%">
+                                <div>
+                                    <strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NF: </strong>
+                                    <span t-field="docs.numero_nfe" style="border: 1px solid black; text-align: center;"/>
+                                </div>
+                                <div>
+                                    <strong>CLIENTE: </strong>
+                                    <span t-field="docs.cliente" style="border: 1px solid black; text-align: center;"/>
+                                </div>
+                                <div>
+                                    <strong style="font-size: 82.3%">PRODUTO: </strong>
+                                    <span t-field="docs.produto" style="border: 1px solid black; text-align: center;"/>
+                                </div>
+                                <div>
+                                    <strong>CÓDIGO: </strong>
+                                    <span t-field="docs.codigo" style="border: 1px solid black; text-align: center;"/>
+                                </div>
+                                <br></br>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div style="flex-basis: 33.33%; margin-right: 10px; border: 2px solid black; padding: 5px; text-align: center">
+                                        <strong>QT TOTAL:</strong>
+                                        <t t-esc="docs.qtt"/>
+                                    </div>
+                                    <div style="flex-basis: 33.33%; margin-right: 10px; border: 2px solid black; padding: 5px; text-align: center">
+                                        <strong>QT CAIXA:<br></br></strong>
+                                        <t t-esc="docs.qtc"/>
+                                    </div>
+                                    <div style="flex-basis: 33.33%;  border: 2px solid black; padding: 5px; text-align: center">
+                                        <strong >VOLUMES:<br></br></strong>
+                                        <t t-esc="docs.volumes"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>
