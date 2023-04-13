@@ -7,7 +7,7 @@
                 <div class="oe_structure">
                     <div class="row">
                         <div class="col-xs-8">
-
+                            <img src="/Etiqueta/static/src/img/icon.jpeg" alt="Logo da Empresa" style="position: absolute; float: left;  width: 30%;"/>
                             <div style="font-size: 320%">
                                 <div>
                                     <strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NF: </strong>
@@ -26,7 +26,12 @@
                                     <span t-field="docs.codigo" style="border: 1px solid black; text-align: center;"/>
                                 </div>
                                 <br></br>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div style="display: -webkit-box; /* wkhtmltopdf uses this one */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center; /* wkhtmltopdf uses this one */
+    -webkit-justify-content: space-between;
+            justify-content: space-between;">
                                     <div style="flex-basis: 33.33%; margin-right: 10px; border: 2px solid black; padding: 5px; text-align: center">
                                         <strong>QT TOTAL:</strong>
                                         <t t-esc="docs.qtt"/>
