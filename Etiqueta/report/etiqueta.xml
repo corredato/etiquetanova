@@ -7,33 +7,32 @@
                 <div class="oe_structure">
                     <div class="row">
                         <div class="col-xs-8">
-                            <img src="/Etiqueta/static/src/img/icon.jpeg" alt="Logo da Empresa" style="position: absolute; float: left;  width: 30%;"/>
                             <div style="font-size: 320%">
                                 <div>
                                     <strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NF: </strong>
-                                    <span t-field="docs.numero_nfe" style="border: 1px solid black; text-align: center;"/>
+                                    <span t-field="docs.numero_nfe" style="border:3px solid black; text-align: center;"/>
                                 </div>
                                 <div>
                                     <strong>CLIENTE: </strong>
-                                    <span t-field="docs.cliente" style="border: 1px solid black; text-align: center;"/>
+                                    <span t-field="docs.cliente" style="border: 3px solid black; text-align: center;"/>
                                 </div>
                                 <div>
                                     <strong style="font-size: 82.3%">PRODUTO: </strong>
-                                    <span t-field="docs.produto" style="border: 1px solid black; text-align: center;"/>
+                                    <span t-field="docs.produto" style="border: 3px solid black; text-align: center;"/>
                                 </div>
                                 <div>
                                     <strong>CÓDIGO: </strong>
-                                    <span t-field="docs.codigo" style="border: 1px solid black; text-align: center;"/>
+                                    <span t-field="docs.codigo" style="border: 3px solid black; text-align: center;"/>
                                 </div>
                                 <br></br>
-                                <div style="display: -webkit-box; /* wkhtmltopdf uses this one */
+                                <div style="display: -webkit-box; /* wkhtmltopdf usa esse modelo */
     display: -webkit-flex;
     display: flex;
-    -webkit-box-pack: center; /* wkhtmltopdf uses this one */
+    -webkit-box-pack: center; /* wkhtmltopdf usa esse modelo */
     -webkit-justify-content: space-between;
             justify-content: space-between;">
                                     <div style="flex-basis: 33.33%; margin-right: 10px; border: 2px solid black; padding: 5px; text-align: center">
-                                        <strong>QT TOTAL:</strong>
+                                        <strong>QT TOTAL:<br></br></strong>
                                         <t t-esc="docs.qtt"/>
                                     </div>
                                     <div style="flex-basis: 33.33%; margin-right: 10px; border: 2px solid black; padding: 5px; text-align: center">
